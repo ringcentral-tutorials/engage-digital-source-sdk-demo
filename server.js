@@ -52,26 +52,19 @@ function parseAction(str) {
 // check if the body is valid or not
 function validateAction(body) {
   // in case there is no action parameter in the request
-  if (!('action' in body)) {
-    console.log('no action in body');
+  if (!('action' in body))
     return false;
-  }
 
-  var action_str = JSON.stringify(body.action);
-  // we doesn't need to go further if action is implementation.info
-  if (action_str === 'implementation.info') {
-    console.log('action is implementation.info');
+  // we don't need to go further if action is implementation.info
+  if (body.action == "implementation.info")
     return true;
-  }
 
   // fills a hash with the object type and the action
-  var action_hash = parseAction(action_str);
+  var action_hash = parseAction(body.action);
 
   // cannot perform a create action without a params parameter
-  if (action_hash.action === 'create' && !('params' in body)) {
-    console.log('create but no params');
+  if (action_hash.action === 'create' && !('params' in body))
     return false;
-  }
 
   // check if the request consists of one valid object and one valid action
   return ["messages", "private_messages", "threads"].includes(action_hash.object) && ["create", "list", "show"].includes(action_hash.action);
