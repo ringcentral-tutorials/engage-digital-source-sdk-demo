@@ -94,4 +94,5 @@ function processDimeloRequest(body) {
   }
 }
 
-app.listen(3000);
+var port = Number(process.env.PORT || 3000);
+app.listen(port);
