@@ -6,13 +6,7 @@ You will find the minimum requirements in order to implement a Dimelo Source SDK
 > - Response signature and request signature check
 > - Base actions (show, list)
 
-------------
-
-Table of contents
 -------------
-[TOC]
-
-------------
 
 Development setup
 ----------------
@@ -26,4 +20,4 @@ Development setup
 If you want to bypass the signature check you can add a `NO_SIGN_CHECK` environment variable:
 > `export NO_SIGN_CHECK="ANY_VALUE_YOU_WANT"`
 
-Its value won't be used, you can use whatever you want. 
+Its value won't be used, you can use whatever you want.
