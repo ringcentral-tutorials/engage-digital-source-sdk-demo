@@ -3,7 +3,7 @@ module.exports = {
   // objects-related requests handling
   Objects: {
     implementationInfo: function () {
-      let implementation_info =
+      const implementation_info =
         {
           "objects":
           {
@@ -89,7 +89,8 @@ module.exports = {
           return false;
 
         // make sure that both object AND action are valid
-        return ["messages", "private_messages", "threads"].includes(action_hash.object) && ["create", "list", "show"].includes(action_hash.action);
+        return ["messages", "private_messages", "threads"].includes(action_hash.object)
+            && ["create", "list", "show"].includes(action_hash.action);
       }
     },
 

@@ -14,7 +14,7 @@ app.get('/', function(req, res) {
 
 // handle post request
 app.post('/', function(req, res) {
-  // set content-type to application/json
+  // set content-type
   res.setHeader('Content-Type', 'application/json');
 
   if (!Dimelo.Request.validation.isValid(req.body)) {
@@ -29,7 +29,8 @@ app.post('/', function(req, res) {
     res.setHeader('X-SMCCSDK-SIGNATURE', sign.signString(response));
     res.end(response);
   }
-  else // bad signature
+  // bad signature
+  else
     res.status(422).send({ error: 'Invalid signature' });
 });
 

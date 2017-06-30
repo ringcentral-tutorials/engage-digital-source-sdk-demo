@@ -11,7 +11,6 @@ module.exports = {
 
   // returns true if the signature is valid, false otherwise
   isSigned: function(body, signature) {
-    console.log(this.signString(body));
     return this.signString(body) == signature;
   }
 };
