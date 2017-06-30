@@ -17,9 +17,10 @@ module.exports = {
     },
 
     messages: {
-      create: function(params) {
-        return "";
-      },
+      // useless in our case
+      // create: function(params) {
+      //   return "";
+      // },
       list: function() {
         return [];
       },
@@ -29,9 +30,10 @@ module.exports = {
     },
 
     private_messages: {
-      create: function(params) {
-        return "";
-      },
+      // useless in our case
+      // create: function(params) {
+      //   return "";
+      // },
       list: function() {
         return [];
       },
@@ -41,9 +43,10 @@ module.exports = {
     },
 
     threads: {
-      create: function(params) {
-        return "";
-      },
+      // useless in our case
+      // create: function(params) {
+      //   return "";
+      // },
       list: function() {
         return [];
       },
