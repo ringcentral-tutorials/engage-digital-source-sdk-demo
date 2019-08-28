@@ -1,5 +1,8 @@
-Engage Digital Source SDK base implementation
+Engage Digital Source SDK demo implementation
 ===================
+
+This is a demo implementation of [RingCentral Engage Digital Source
+SDK](https://github.com/ringcentral/engage-digital-source-sdk/wiki)
 
 You will find the minimum requirements in order to implement a Engage Digital Source SDK:
 > - implementation.info
